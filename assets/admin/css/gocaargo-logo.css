@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+.wheel,
+.wheel:after,
+.wheel:before {
+    bottom: -20%;
+    width: 12.8%;
+    height: 46.38%;
+    border-radius: 100%;
+    background: #1e2327;
+}
+
+
+.wheelbase {
+    float: left;
+    height: 75px;
+    margin: 5px;  /* 15px */
+    position: relative;
+    width: 75px;
+}
+
+.small .wheelbase {
+	height:82px;
+	width:82px;
+}
+
+
+.wheela {
+	background:url(../img/gocaargo-wheel.png);
+	background-size:100% 100%;
+	height:75px;
+	width:75px;
+
+/*    left: 21.5%; */
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear; 
+}
+
+
+.small .wheela {
+	height:82px;
+	width:82px;
+}
+
+.wheelbase .glogo  {
+	animation: 0s ease 0s normal none 1 running none;
+    background: #fff url("../img/gocaargo-name.png") no-repeat scroll 6px 6px / 75% 75%;
+    border-radius: 99% !important;
+    height: 43px;
+    left: 16px;
+    position: absolute;
+    top: 16px;
+    width: 43px;
+}
+
+.small .wheelbase .glogo  {
+	width:46px;
+	height:46px;
+	left:18px;
+	top:18px;
+	background-position:6px 6px;
+	}
+
+.wheel.front {
+    left: 82%;
+}
+
+.wheel:after,
+.wheel:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+}
+
+.wheel:before {
+    background: #aaa;
+}
+
+.wheel:after {
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+}
+
+.callnow { background:url(../img/gocaargo-callnow.png) no-repeat; width:262px; height:42px; right:0px; top:50px; position:absolute; }
+
+#bookingform {  padding:30px 0px 0 20px; border-bottom:0px solid #ccc; width:80%; margin:0 auto; }
+#dss_001_pickuplocation, #pickupdate, #dss_001_contact_no,#returndate,#dss_001_dropoflocation { background:#fff; }
+#bookingform .select2-choice { background:none; background-image:none; background-color:#fff; height:41px;
+line-height:41px; padding-left:9px; color:#444; font-size:14px; }
+#bookingform .select2-container-active .select2-choice, #bookingform .select2-container-active .select2-choices { border-radius:0 !important; }
+#bookingform .select2-container .select2-choice .select2-arrow { top:7px; width:20px; border-left:none;  }
+#bookingform .span3, #bookingform .span2 { margin-left:0px; }
+#bookingform input.m-wrap[class*="span"] { height:43px !important; line-height:41px; margin:0px; }
+#bookingform .btn.yellow { background:#fff100; margin-left:0px !important; height:43px; color:#444;  }
+#bookingform .row-fluid { margin: 0 auto; width: auto; }
+#bookingform fa-search::before {
+    content: "";
+}
+#bookingform .fa-search {
+      font-size: 16px;
+    font-weight: bold;
+    width: 115px;
+} 
+#bookingform .select2-container .select2-choice abbr { top:14px; color:#FF0000; }
+
+.front-header.cabsbook { height:185px !important; background:#fff; }
+.cabsbook .navbar-inner li > a:hover, .cabsbook .navbar-inner li.active > a, .cabsbook .navbar-inner li.active:hover > a,
+.cabsbook .navbar-inner li a { color:#000; }
+.cabsbook .wheelbase .glogo { height: 35px; background-position:5px 5px;
+    left: 15px;
+    top: 15px;
+    width: 35px; }
+	
+.cabsbook .wheela, .cabsbook .wheelbase  {  height: 65px; width: 65px; }
+.cabsbook .navbar .nav > li { margin-top:15px; }
+
+.cabsbook .navbar-inner .nav-collapse > ul.login { margin-top:0px; }
+
+.front-footer-top {     background: #405d85 url("../img/citiesbg.jpg") no-repeat scroll center bottom / 100% auto;
+
+ }
+.front-footer-top ul li a { color:#fff; font-size:14px; line-height:22px;  }
+.front-footer-top ul li h2 { color:#fee000;  font-size:16px; line-height:25px; padding:7px 0 5px; font-weight:bold; margin:0px; }
+.front-footer-top ul li { list-style:none; }
+.front-footer-top ul { margin:30px 0px; }
+
+.feature-banner { border:1px solid #ccc; }
+.feature-banner .service-box-heading { text-align:center; }
+.feature-banner .service-box-heading img { width:150px !important; margin:5px 0; }
+
+.nav-tabs > li > a { color:#888; font-size:15px; padding:15px 25px; }
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus { 
+	background:none;
+	border:1px solid #00a859;
+	border-top:3px solid #00a859;
+	color:#00a859;
+}
+
+.nav-tabs >  li > a:hover { background:none; border:1px solid #d9d9d9; color:#000; }
+.nav-tabs { border-bottom:none; }
+
+@media (max-width: 480px) {
+ 
+ .datetimepicker {
+    left: 48px !important;
+    top: 210px !important;
+}
+	.wheelbase {
+		width:65px;
+		height:65px;
+		margin:5px;
+	} 
+
+.wheela {
+	height:65px;
+	width:65px;
+}
+
+
+.small .wheelbase .glogo, .wheelbase .glogo   {
+	width:38px;
+	height:38px;
+	left:14px;
+	top:14px;
+	background-position:4px 4px;
+	}
+
+.front-header { background:#fff; height:75px !important; }
+.truck-container { display:none !important; }
+
+.front-header .navbar-inner .btn-navbar { margin-top:20px !important; }
+
+.callnow { display:none !important; }
+
+.front-header .navbar-inner .nav-collapse > ul { background:#fee600; }
+
+.breadcrumbs  { margin-bottom:0 !important; }
+.thumbnails .span2 { text-align:center; }
+
+.mobileonly { display:block !important; }
+
+}
