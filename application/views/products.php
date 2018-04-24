@@ -50,7 +50,7 @@
     .collec {
         margin-left: auto;
         margin-right: auto;
-        width: 365px;
+        width: 440px;
         margin-top: 0px;
     }
 			 .product-list{
@@ -110,6 +110,9 @@
 					<div id="smoothie" class="custom-box" style="display:none">
 						<b class="theme-color">Smoothie</b> is a thick beverage made from blended raw fruit, vegetables or ice cream and cookies with other ingredients such as water, ice, or sweeteners.
 					</div>
+					<div id="cookies" class="custom-box" style="display:none">
+						<b class="theme-color">Cookies</b> is a baked or cooked food that is small, flat and sweet. It usually contains flour, sugar and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc.
+					</div>
                     <div class="grid grid--uniform grid--view-items product-list">
                         <?php if (!empty($productInfo)) {
              ?>
@@ -121,7 +124,7 @@
                                         ?>
 
                                         <input type="hidden" name="product[]" value="<?= $product['id'] ?>">
-									<div class="grid__item grid__item--collection-template small--one-half medium-up--one-quarter mb-50">
+									<div class="grid__item grid__item--collection-template small--one-half medium-up--one-quarter mb-50 product-height">
                                         <div class="grid-view-item mb-0">
                                             <div class="imgfix">
                                                 <img class="grid-view-item__image" src="<?= base_url() ?>uploads/<?= $product['product_image'] ?>" alt="Black Tuna">
@@ -215,6 +218,11 @@
   
   var msg = document.getElementById('smoothie');
   if( url.search( '4' ) > 0 ) {
+      msg.style.display = "block";
+  }
+  
+  var msg = document.getElementById('cookies');
+  if( url.search( '5' ) > 0 ) {
       msg.style.display = "block";
   }
 </script>

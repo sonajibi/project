@@ -1,0 +1,2 @@
+[18-Apr-2018 16:47:28 Asia/Calcutta] PHP Fatal error:  Call to undefined function base_url() in /home/returnon/public_html/canb/application/views/header.php on line 3
+[21-Apr-2018 00:36:46 Asia/Calcutta] PHP Fatal error:  Call to undefined function base_url() in /home/returnon/public_html/canb/application/views/index.php on line 2

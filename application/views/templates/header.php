@@ -41,12 +41,37 @@ if (!defined('front_assets')) {
         </style>
 
     </head>
-
     <body>
 
         <!--Header-part-->
         <div id="shopify-section-header" class="shopify-section">
             <div data-section-id="header" data-section-type="header-section">
+				
+				<nav class="mobile-nav-wrapper medium-up--hide" role="navigation">
+					<ul id="MobileNav" class="mobile-nav">
+                  <li class="mobile-nav__item border-bottom">
+                      <a href="http://canb.spokesdigital.in/application/views/home.html" class="mobile-nav__link">
+                          Home
+                      </a>
+                  </li>
+                  <li class="mobile-nav__item border-bottom">
+                      <a href="http://canb.spokesdigital.in" class="mobile-nav__link">
+                          Products
+                      </a>
+                  </li>
+                  <li class="mobile-nav__item border-bottom">
+                      <a href="http://canb.spokesdigital.in/application/views/faq.html" class="mobile-nav__link">
+                          FAQ
+                      </a>
+                  </li>
+                  <li class="mobile-nav__item border-bottom">
+                      <a href="http://canb.spokesdigital.in/application/views/" class="mobile-nav__link">
+                          Contact Us
+                      </a>
+                  </li>
+              </ul>
+				</nav>
+			
                 <header class="site-header border-bottom logo--left" role="banner">
                     <div class="grid grid--no-gutters grid--table">
                         <div class="grid__item small--one-half medium-up--one-quarter logo-align--left">
@@ -57,6 +82,24 @@ if (!defined('front_assets')) {
                                 </a>
                             </div>
                         </div>
+						
+						<nav class="grid__item medium-up--one-half small--hide" id="AccessibleNav" role="navigation">
+							<ul class="site-nav list--inline" id="SiteNav">
+                          <li>
+                              <a href="http://canb.spokesdigital.in/application/views/home.html" class="site-nav__link site-nav__link--main">Home</a>
+                          </li>
+                          <li>
+                              <a href="http://canb.spokesdigital.in" class="site-nav__link site-nav__link--main">Products</a>
+                          </li>
+                          <li class="site-nav--active">
+                              <a href="http://canb.spokesdigital.in/application/views/faq.html" class="site-nav__link site-nav__link--main">FAQ</a>
+                          </li>
+                          <li>
+                              <a href="http://canb.spokesdigital.in/application/views/contact-us.html" class="site-nav__link site-nav__link--main">Contact Us</a>
+                          </li>
+                      </ul>
+						</nav>
+						
                         <div class="grid__item small--one-half medium-up--one-quarter text-right site-header__icons site-header__icons--plus float-right">
                             <div class="site-header__icons-wrapper">
 
@@ -77,7 +120,12 @@ if (!defined('front_assets')) {
                                     | <a class="<?= ($this->uri->segment(2)=='order_history')?'active':''; ?>" href="<?php echo base_url(); ?>dashboard/order_history">Order History</a> 
                                     | <a  href="<?php echo base_url(); ?>login/logout">Logout</a>
                                 <?php } ?>
-
+								
+								<button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+									<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 37 40"><path d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z" /></svg>
+									<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 37 40"><path d="M21.3 23l11-11c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0l-11 11-11-11c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8l11 11-11 11c-.8.8-.8 2 0 2.8.4.4.9.6 1.4.6s1-.2 1.4-.6l11-11 11 11c.4.4.9.6 1.4.6s1-.2 1.4-.6c.8-.8.8-2 0-2.8l-11-11z" /></svg>
+									<span class="icon__fallback-text">expand/collapse</span>
+								</button>
                             </div>
                         </div>
                     </div>
@@ -113,3 +161,5 @@ if (!defined('front_assets')) {
                 $this->session->set_userdata($data);
             }
             ?>
+			
+			   

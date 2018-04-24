@@ -33,7 +33,7 @@ $userInfo = $this->frontend_model->fetch_recordbyid('users', array('id' => $this
                 color: #b94a48;
                 padding: 10px;
                 border-radius: 7px; 
-            }
+            }						.logo-style {				background: #a4c129;				color: #fff;				padding: 5px 25px;			}
         </style>
     </head>
 
@@ -43,8 +43,8 @@ $userInfo = $this->frontend_model->fetch_recordbyid('users', array('id' => $this
             <div class="wrap">
                 <div class="main" role="main">
                     <div class="main__header">
-                        <a class="logo logo--left" href="#">
-                            <img src="<?php echo front_assets; ?>images/logo.png" alt="Logo" class="logo__image logo__image--medium" />
+                        <a class="logo logo--left" href="#">						<h2><span class="logo-style">WB</span></h2>
+                            <!--<img src="<?php echo front_assets; ?>images/logo.png" alt="Logo" class="logo__image logo__image--medium" />-->
                         </a>
                         <h1 class="visually-hidden">
                             Customer information
@@ -70,7 +70,7 @@ $userInfo = $this->frontend_model->fetch_recordbyid('users', array('id' => $this
 
                     <div class="main__content">
                         <div class="step" data-step="contact_information">
-                            <form method="post" class="edit_checkout" action="<?= base_url(); ?>checkout/order_now">
+                            <form method="post" name="myform" class="edit_checkout" action="<?= base_url(); ?>checkout/order_now" onsubmit="return validate_creditcardnumber();>
                                 <div class="step__sections">
                                     <div class="section section--contact-information">
                                         <div class="section__header">
@@ -204,6 +204,36 @@ $userInfo = $this->frontend_model->fetch_recordbyid('users', array('id' => $this
                                             </div>
                                         </div>
                                     </div>
+									
+									<div class="section section--shipping-address">
+										<div class="section__header">
+                                            <h2 class="section__title">
+                                                Payment Details
+                                            </h2>
+                                        </div>
+										<div class="section__content">
+											<div class="fieldset">
+												 <div class="field--three-eights field field--required">
+                                                    <label class="field__label" for="checkout_shipping_address_address1">Card Number</label>
+                                                    <div class="field__input-wrapper">
+                                                        <input placeholder="Card Number" role="combobox" aria-expanded="false" aria-required="true" class="field__input" id="CreditCardNumber" size="30" type="text" name="card" id="checkout_shipping_address_address1"/>
+                                                    </div>
+                                                </div>
+                                                <div class="field--three-eights field field--required">
+                                                    <label class="field__label" for="checkout_shipping_address_address1">CVV</label>
+                                                    <div class="field__input-wrapper">
+                                                        <input placeholder="CVV" role="combobox" aria-expanded="false" aria-required="true" class="field__input" size="30" type="text" name="cvv" id="checkout_shipping_address_address1"/>
+                                                    </div>
+                                                </div>
+                                                <div class="field--quarter field field--required">
+                                                    <label class="field__label" for="checkout_shipping_address_address1">Expiry Date</label>
+                                                    <div class="field__input-wrapper">
+                                                        <input placeholder="Expiry Date" role="combobox" aria-expanded="false" aria-required="true" class="field__input" size="30" type="text" name="expiry" id="checkout_shipping_address_address1"/>
+                                                    </div>
+                                                </div>
+											</div>
+										</div>
+									</div>
                                 </div>
 
                                 <div class="step__footer">
